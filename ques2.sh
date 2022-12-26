@@ -6,7 +6,7 @@
 
 if [[ ${#} -eq 0 ]]
 then
-        echo "Use the script like this: ${0} -file_name"
+        echo " Error: Input data not provided: -file_name"
         exit 2
 fi
 str=${1}
