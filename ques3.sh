@@ -20,5 +20,5 @@ for i in $( grep -A1 -i --no-group-separator 'Today\|Tomorrow'  ${1} )
 	 #FILE="$FILE $LINE "
      done
      FILE="$FILE $LINE "
-echo -e $FILE | sort -k1
+echo -e $FILE | sort -k1 | column -t -s:
 #$FILE
