@@ -1,6 +1,6 @@
 #!/bin/bash
-# read the country input and get the results accourdingly 
-
+# read the country input and get the first 50  results accourdingly 
+# How to run ./ques8.sh india
 
 if [[ "${#}" -eq 0 ]]
 then echo "Error :No Argument passed" exit 2
