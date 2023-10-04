@@ -1,7 +1,9 @@
 name: PR
 
 on: workflow_dispatch
-
+defaults:
+  run:
+    shell: bash -leo pipefail {0}
 jobs:
   workflowrun:
     uses: ./.github/workflows/workflow_a.yml
