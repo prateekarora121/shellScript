@@ -5,12 +5,12 @@ defaults:
   run:
     shell: bash -leo pipefail {0}
 jobs:
-  workflowrun:
+  Main:
     uses: ./.github/workflows/workflow_a.yml
     secrets: inherit
-  coverage:
+  TestArtifacts:
     runs-on: ubuntu-latest
-    needs: [workflowrun]
+    needs: [Main]
     steps:
       - name: actions/download-artifacts@v3
         with: 
