@@ -10,7 +10,7 @@ defaults:
     shell: bash -leo pipefail {0}
 jobs:
   Main:
-    uses: ./.github/workflows/workflow_a.yml
+    uses: ./workflow_a.yml
     secrets: inherit
         
 
