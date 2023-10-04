@@ -12,5 +12,16 @@ jobs:
   Main:
     uses: ./.github/workflows/workflow_a.yml
     secrets: inherit
-        
+  TestArtifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: actions/download-artifacts@v3
+        with: 
+          name: workflow-${{ github.sha}}
+      - name: Check files
+        run: |
+          ls -a
+          cat test.txt
+    needs: 
+      - Main
 
