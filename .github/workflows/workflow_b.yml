@@ -15,7 +15,7 @@ jobs:
   Test-Artifacts:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifacts@v1
+      - uses: actions/download-artifacts@master
         with: 
           name: workflow-${{ github.sha}}
       - name: Check files
