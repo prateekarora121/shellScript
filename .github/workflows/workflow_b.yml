@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   workflowrun:
-    users: workflow_a.yml
+    uses: prateekarora121/shellScript/.github/workflows/workflow_a.yml
     secrets: inherit
   coverage:
     runs-on: ubuntu-latest
