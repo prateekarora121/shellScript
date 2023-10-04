@@ -1,0 +1,19 @@
+name: PR
+
+on: workflow_dispatch
+
+jobs:
+  workflowrun:
+    users: workflow_a.yml
+    secrets: inherit
+  coverage:
+    runs-on: ubuntu-latest
+    needs: [workflowrun]
+    steps:
+      - name: actions/download-artifacts@v3
+        with: 
+          name: workflow-${{ github.sha}}
+      - name: Check files
+        run: |
+          ls -a
+          cat test.txt
