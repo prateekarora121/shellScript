@@ -15,7 +15,7 @@ jobs:
           echo "Test" > test.txt
           cat test.txt
       - name: Upload Artifacts
-        uses: actions/upload-artifacts@v3
+        uses: actions/upload-artifact@v1
         with:
           name: workflow-${{ github.sha}}
           path: test.txt
