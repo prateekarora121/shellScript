@@ -10,6 +10,7 @@ defaults:
     shell: bash -leo pipefail {0}
 jobs:
   Main:
+    runs-on: ubuntu-latest
     uses: ./.github/workflows/workflow_a.yml
     secrets: inherit
   TestArtifacts:
