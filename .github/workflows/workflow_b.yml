@@ -18,10 +18,6 @@ jobs:
       - name: actions/download-artifacts@v3
         with: 
           name: workflow-${{ github.sha}}
-      - name: Check files
-        run: |
-          ls -a
-          cat test.txt
     needs: 
       - Main
         
